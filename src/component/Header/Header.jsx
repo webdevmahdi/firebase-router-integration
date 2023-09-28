@@ -1,14 +1,15 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Header = () => {
     return (
         <div>
-            <div className="navbar bg-neutral text-neutral-content">
-                <NavLink to="/" className="btn btn-ghost normal-case text-xl p-3">Home</NavLink>
-                <NavLink to="about" className="btn btn-ghost normal-case text-xl p-3">About</NavLink>
-                <NavLink to="contact">Contact</NavLink>
-            </div>
+        <div className="navbar bg-primary text-primary-content">
+            <a className="btn btn-ghost normal-case text-xl text-black">daisyUI</a>
+            <Link className="btn btn-ghost normal-case text-xl" to='/'>Home</Link>
+            <Link className="btn btn-ghost normal-case text-xl text-slate-400" to='/register'>Register</Link>
+            <Link className="btn btn-ghost normal-case text-xl text-slate-400" to='/login'>Log in</Link>
+        </div>
         </div>
     )
 }

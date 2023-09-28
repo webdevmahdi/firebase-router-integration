@@ -1,28 +1,32 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import Home from './component/Home/Home.jsx';
-import About from './component/About/About.jsx';
-import Contact from './component/Contact/Contact.jsx';
+import Main from './component/Main';
+import Register from './component/Register';
+import Login from './component/Login';
 
 
 let router = createBrowserRouter([
   {
     path: '/',
-    element: <Home></Home>,
+    element: <Main></Main>,
     children: [
       {
-        path: 'about',
-        element: <About></About>
+        path: '/',
+        element: <Home></Home>
       },
       {
-        path: 'contact',
-        element: <Contact></Contact>
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/register',
+        element: <Register></Register>
       }
     ]
   }
